@@ -18,11 +18,11 @@ public partial class FindPage : ContentPage
     {
         base.OnAppearing();
 
-        var movieTemplate = new DataTemplate(typeof(TextCell));
-        movieTemplate.SetBinding(TextCell.TextProperty, "Title");
+        var movieTemplate = new DataTemplate(typeof(TextCell)); // creating template to display ListView via TextCells
+        movieTemplate.SetBinding(TextCell.TextProperty, "Title"); // binds TextCell.TextProperty to Title
         movieTemplate.SetBinding(TextCell.DetailProperty, "Rating");
 
-        listMovies.ItemTemplate = movieTemplate;
-        listMovies.ItemsSource = App.MovieList;
+        listMovies.ItemTemplate = movieTemplate; // use the movieTemplate for showing how each item in ListView will be displayed
+        listMovies.ItemsSource = App.MovieList; // bind ListView to movies stored data model collection and able those store movies to be displayed
     }
 }
