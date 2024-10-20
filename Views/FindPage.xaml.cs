@@ -23,6 +23,6 @@ public partial class FindPage : ContentPage
         movieTemplate.SetBinding(TextCell.DetailProperty, "Rating");
 
         listMovies.ItemTemplate = movieTemplate; // use the movieTemplate for showing how each item in ListView will be displayed
-        listMovies.ItemsSource = App.MovieList; // bind ListView to movies stored data model collection and able those store movies to be displayed
+        listMovies.ItemsSource = App.MovieList.GetMovies(); // bind ListView to movies stored in repository and able those store movies to be displayed
     }
 }

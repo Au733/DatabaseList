@@ -21,7 +21,7 @@ public partial class AddPage : ContentPage
         newMovie.Title = txtTitle.Text;
         newMovie.Rating = txtRating.Text;
         
-        App.MovieList.Add(newMovie); // adding new movie data to data model collection
+        App.MovieList.SaveMovie(newMovie); // adding new movie data to repository
 
         txtTitle.Text = string.Empty;
         txtRating.Text = String.Empty;
