@@ -4,7 +4,7 @@ namespace MovieApp;
 
 public partial class App : Application
 {
-    public static Repository MovieList; // data model collection for storing movies
+    public static Repository MovieList; // storing movies in repository
     
     public App()
     {
